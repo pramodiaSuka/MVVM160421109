@@ -38,7 +38,7 @@ class StudentDetailFragment : Fragment() {
             binding.txtId.setText(it.id)
             binding.txtName.setText(it.name)
             binding.txtPhone.setText(it.phone)
-            binding.txtBirthOfDate.setText(it.dob)
+            binding.txtBirthOfDate.setText(it.bod)
         })
     }
 }
