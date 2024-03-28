@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/studentListFragment">
+    app:startDestination="@id/motorcycleListFragment">
 
     <fragment
         android:id="@+id/studentListFragment"
@@ -19,4 +19,9 @@
         android:name="com.maverick.studentapp.view.StudentDetailFragment"
         android:label="fragment_student_detail"
         tools:layout="@layout/fragment_student_detail" />
+    <fragment
+        android:id="@+id/motorcycleListFragment"
+        android:name="com.maverick.studentapp.view.MotorcycleListFragment"
+        android:label="fragment_motorcycle_list"
+        tools:layout="@layout/fragment_motorcycle_list" />
 </navigation>
