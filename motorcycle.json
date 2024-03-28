@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Honda CB500F",
+    "manufacturer": "Honda",
+    "year": 2022,
+    "engine": {
+      "type": "Inline-4",
+      "displacement": 471,
+      "power": "49 hp"
+    },
+    "colors": ["Black", "Red", "White"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=1"
+  },
+  {
+    "id": 2,
+    "name": "Yamaha YZF-R6",
+    "manufacturer": "Yamaha",
+    "year": 2023,
+    "engine": {
+      "type": "Inline-4",
+      "displacement": 599,
+      "power": "120 hp"
+    },
+    "colors": ["Blue", "Black", "Yellow"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=2"
+  },
+  {
+    "id": 3,
+    "name": "Kawasaki Ninja 650",
+    "manufacturer": "Kawasaki",
+    "year": 2024,
+    "engine": {
+      "type": "Parallel-Twin",
+      "displacement": 649,
+      "power": "68 hp"
+    },
+    "colors": ["Green", "Black", "Grey"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=3"
+  },
+  {
+    "id": 4,
+    "name": "Ducati Panigale V2",
+    "manufacturer": "Ducati",
+    "year": 2023,
+    "engine": {
+      "type": "V-Twin",
+      "displacement": 955,
+      "power": "155 hp"
+    },
+    "colors": ["Red", "White", "Black"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=4"
+  },
+  {
+    "id": 5,
+    "name": "BMW S1000RR",
+    "manufacturer": "BMW",
+    "year": 2024,
+    "engine": {
+      "type": "Inline-4",
+      "displacement": 999,
+      "power": "207 hp"
+    },
+    "colors": ["Blue", "White", "Red"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=5"
+  },
+  {
+    "id": 6,
+    "name": "Harley-Davidson Iron 883",
+    "manufacturer": "Harley-Davidson",
+    "year": 2023,
+    "engine": {
+      "type": "V-Twin",
+      "displacement": 883,
+      "power": "51 hp"
+    },
+    "colors": ["Black", "Grey", "Blue"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=6"
+  },
+  {
+    "id": 7,
+    "name": "Triumph Street Triple RS",
+    "manufacturer": "Triumph",
+    "year": 2024,
+    "engine": {
+      "type": "Inline-3",
+      "displacement": 765,
+      "power": "121 hp"
+    },
+    "colors": ["Black", "Grey", "Yellow"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=7"
+  },
+  {
+    "id": 8,
+    "name": "Suzuki GSX-R750",
+    "manufacturer": "Suzuki",
+    "year": 2023,
+    "engine": {
+      "type": "Inline-4",
+      "displacement": 750,
+      "power": "148 hp"
+    },
+    "colors": ["Blue", "White", "Black"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=8"
+  },
+  {
+    "id": 9,
+    "name": "Indian Scout",
+    "manufacturer": "Indian",
+    "year": 2022,
+    "engine": {
+      "type": "V-Twin",
+      "displacement": 1133,
+      "power": "100 hp"
+    },
+    "colors": ["Red", "Black", "Silver"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=9"
+  },
+  {
+    "id": 10,
+    "name": "Aprilia Tuono V4 1100 Factory",
+    "manufacturer": "Aprilia",
+    "year": 2024,
+    "engine": {
+      "type": "V4",
+      "displacement": 1077,
+      "power": "175 hp"
+    },
+    "colors": ["Black", "Grey", "Red"],
+    "images": "https://loremflickr.com/320/240/motorcycle?lock=10"
+  }
+]
