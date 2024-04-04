@@ -11,9 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.maverick.studentapp.R
 import com.maverick.studentapp.databinding.FragmentStudentDetailBinding
 import com.maverick.studentapp.viewmodel.DetailViewModel
+import com.squareup.picasso.Callback
+import com.squareup.picasso.Picasso
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
+import java.lang.Exception
 import java.util.concurrent.TimeUnit
 
 class StudentDetailFragment : Fragment() {
@@ -60,6 +63,20 @@ class StudentDetailFragment : Fragment() {
             binding.txtName.setText(it.name)
             binding.txtPhone.setText(it.phone)
             binding.txtBirthOfDate.setText(it.bod)
+            val picasso = Picasso.Builder(requireContext())
+            picasso.listener { picasso, uri, exception ->
+                exception.printStackTrace()
+            }
+            picasso.build().load(it.photoUrl).into(binding.imageView2, object:
+                Callback {
+                override fun onSuccess() {
+                    binding.imageView2.visibility = View.VISIBLE
+                }
+
+                override fun onError(e: Exception?) {
+                    Log.e("picasso_error", e.toString())
+                }
+            })
         })
     }
 }
