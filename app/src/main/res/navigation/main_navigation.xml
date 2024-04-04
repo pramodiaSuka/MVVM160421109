@@ -18,7 +18,11 @@
         android:id="@+id/studentDetailFragment"
         android:name="com.maverick.studentapp.view.StudentDetailFragment"
         android:label="fragment_student_detail"
-        tools:layout="@layout/fragment_student_detail" />
+        tools:layout="@layout/fragment_student_detail" >
+        <argument
+            android:name="student_id"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/motorcycleListFragment"
         android:name="com.maverick.studentapp.view.MotorcycleListFragment"
