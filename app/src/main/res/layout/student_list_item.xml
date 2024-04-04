@@ -24,14 +24,15 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imgStudent"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_launcher_foreground"
-                tools:srcCompat="@drawable/ic_launcher_foreground" />
+                tools:srcCompat="@drawable/ic_launcher_foreground"
+                tools:visibility="invisible" />
 
             <TextView
                 android:id="@+id/txtId"
@@ -40,7 +41,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="32dp"
                 android:text="ID Student"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imgStudent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -51,7 +52,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Student Name"
                 android:textSize="24sp"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imgStudent"
                 app:layout_constraintTop_toBottomOf="@+id/txtId" />
 
             <Button
@@ -65,6 +66,17 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            <ProgressBar
+                android:id="@+id/progressImage"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imgStudent"
+                app:layout_constraintEnd_toEndOf="@+id/imgStudent"
+                app:layout_constraintStart_toStartOf="@+id/imgStudent"
+                app:layout_constraintTop_toTopOf="@+id/imgStudent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

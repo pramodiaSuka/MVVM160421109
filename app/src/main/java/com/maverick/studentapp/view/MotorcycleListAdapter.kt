@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.maverick.studentapp.databinding.MotorcycleListItemBinding
 import com.maverick.studentapp.model.Motorcycle
+import com.squareup.picasso.Picasso
 
 class MotorcycleListAdapter(val motorcycleList:ArrayList<Motorcycle>):RecyclerView.Adapter<MotorcycleListAdapter.MotorcycleViewHolder>() {
     class MotorcycleViewHolder(var binding:MotorcycleListItemBinding):RecyclerView.ViewHolder(binding.root)
