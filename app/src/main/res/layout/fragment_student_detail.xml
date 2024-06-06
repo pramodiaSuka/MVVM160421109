@@ -1,65 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.StudentDetailFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+        <variable
+            name="student"
+            type="com.maverick.studentapp.model.Student" />
+        <variable
+            name="listener"
+            type="com.maverick.studentapp.view.ButtonUpdateClickListener" />
+        <variable
+            name="notifListener"
+            type="com.maverick.studentapp.view.ButtonCreateNotifListener" />
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        tools:context=".view.StudentDetailFragment">
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/txtId"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:ems="10"
-            android:hint="Student Id"
-            android:inputType="text" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imageUrl="@{student.photoUrl}"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
 
-        <EditText
-            android:id="@+id/txtName"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:ems="10"
-            android:hint="Student Name"
-            android:inputType="text" />
+            <EditText
+                android:id="@+id/txtId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Student Id"
+                android:text="@{student.id}"
+                android:inputType="text" />
 
-        <EditText
-            android:id="@+id/txtBirthOfDate"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:ems="10"
-            android:hint="Birth Of Date"
-            android:inputType="text" />
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Student Name"
+                android:text="@{student.name}"
+                android:inputType="text" />
 
-        <EditText
-            android:id="@+id/txtPhone"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:ems="10"
-            android:hint="Phone"
-            android:inputType="text" />
+            <EditText
+                android:id="@+id/txtBirthOfDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Birth Of Date"
+                android:text="@{student.bod}"
+                android:inputType="text" />
 
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_margin="10dp"
-            android:text="Update" />
+            <EditText
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Phone"
+                android:text="@{student.phone}"
+                android:inputType="text" />
 
-    </LinearLayout>
-</FrameLayout>
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="10dp"
+                android:text="Update"
+                android:tag="@{student.id}"
+                android:onClick="@{listener::onButtonUpdateClick}"/>
+
+            <Button
+                android:id="@+id/btnNotif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Create Notification"
+                android:tag="@{student.name}"
+                android:onClick="@{notifListener::onButtonCreateNotif}"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+</layout>
